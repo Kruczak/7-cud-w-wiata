@@ -1,0 +1,99 @@
+
+
+
+
+@keyframes logoAnimation {
+    0% { transform: scale(1); color: #1a73e8; }
+    50% { transform: scale(1.2); color: #34a853; }
+    100% { transform: scale(1); color: #ea4335; }
+}
+
+/* Ogólne style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #666A86;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1e2329;
+    color: #fff;
+}
+
+header h1 {
+    animation: logoAnimation 3s infinite;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.15);
+}
+
+footer {
+    text-align: center;
+    padding: 4px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+}
